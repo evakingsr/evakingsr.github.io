@@ -51,9 +51,9 @@ const funFacts = [
   { icon: MapPin, text: "Originally from Queens and Brooklyn, NY" },
   {
     icon: GraduationCap,
-    text: "I will defend Bowdoin dining hall's number one ranking to anyone who asks (go Polar Bears)",
+    text: "My Latin American and Caribbean Studies minor started with family, food, and history",
   },
-  { icon: Sparkles, text: "Ask me about binary trees, flag football, or the best bagel in NYC" },
+  { icon: Sparkles, text: "Ask me about binary trees, flag football, or the best Jamaican patties" },
 ];
 
 function ContactPage() {
