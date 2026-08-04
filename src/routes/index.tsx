@@ -1,10 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroGradient from "@/assets/hero-gradient.jpg";
 import headshot from "@/assets/headshot.jpg.asset.json";
-import { Award, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 
+import { GetInTouch } from "@/components/get-in-touch";
 import { SiteLayout } from "@/components/site-layout";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,29 +29,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const skillGroups = [
-  {
-    group: "Programming Languages",
-    items: ["Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "Flask"],
-  },
-  {
-    group: "Software & Tools",
-    items: ["Visual Studio Code", "IntelliJ IDEA CE", "IDLE", "Wing 101", "Codio"],
-  },
-];
-
-const certifications = [
-  {
-    title: "Intermediate Technical Interview Prep Course",
-    issuer: "CodePath",
-    meta: "Data structures, algorithms, and interview problem solving",
-  },
-  {
-    title: "HTML & CSS Certification",
-    issuer: "Girls Who Code",
-    meta: "Issued July 2023 | Wireframing, HTML, CSS",
-  },
-];
 
 
 const campusRoles = [
@@ -169,54 +148,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-20">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-          Toolkit
-        </p>
-        <h2 className="mt-2 text-3xl font-bold">Technical skills & certifications</h2>
+      <GetInTouch />
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2">
-          {skillGroups.map((group) => (
-            <article
-              key={group.group}
-              className="surface-card p-6 transition-all hover:-translate-y-1 hover:border-primary/40"
-            >
-              <h3 className="text-sm font-semibold uppercase tracking-wide">{group.group}</h3>
-              <ul className="mt-4 flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-5 grid gap-5 sm:grid-cols-2">
-          {certifications.map((cert) => (
-            <article
-              key={cert.title}
-              className="surface-card relative overflow-hidden p-6 transition-all hover:-translate-y-1 hover:border-primary/40"
-            >
-              <div className="gradient-soft absolute inset-y-0 left-0 w-1.5" />
-              <div className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
-                  <Award size={18} aria-hidden="true" />
-                </span>
-                <div>
-                  <h3 className="text-base font-semibold leading-snug">{cert.title}</h3>
-                  <p className="mt-1 text-sm font-medium text-primary">{cert.issuer}</p>
-                  <p className="mt-2 text-sm text-muted-foreground">{cert.meta}</p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
 
 
       <section className="mx-auto max-w-5xl px-6 pb-20">
