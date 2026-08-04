@@ -75,7 +75,23 @@ const projects = [
     repo: "https://github.com/evakingsr/PennyPlan",
     demo: null as string | null,
   },
+  {
+    title: "TagAlong",
+    tagline: "Personalized travel planning",
+    summary:
+      "A travel planning application that generates day-by-day itineraries tailored to a user's destination, travel dates, and preferences. It blends weather forecasts, local attractions, and AI recommendations so travelers spend less time planning and more time exploring.",
+    highlights: [
+      "Personalized day-by-day itineraries built from destination, dates, and preferences",
+      "Attractions, restaurants, events, and activities pulled from external APIs",
+      "Real-time weather forecasts folded into each day's recommendations",
+      "Trip data stored and managed in a SQLite database",
+    ],
+    stack: ["Python", "SQLite", "Google Gemini API", "Geoapify API", "WeatherAPI"],
+    repo: "https://github.com/aloulou-dev/tagalong",
+    demo: null as string | null,
+  },
 ];
+
 
 
 function ProjectsPage() {
