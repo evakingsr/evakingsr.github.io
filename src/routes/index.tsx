@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroGradient from "@/assets/hero-gradient.jpg";
+import headshot from "@/assets/headshot.jpg.asset.json";
+
 import { SiteLayout } from "@/components/site-layout";
 
 export const Route = createFileRoute("/")({
@@ -55,17 +57,18 @@ function Index() {
         />
         <div className="relative mx-auto max-w-5xl px-6 py-24 sm:py-32">
           <div className="flex flex-col items-start gap-8 sm:flex-row sm:items-center">
-            <div className="h-32 w-32 shrink-0 overflow-hidden rounded-full border border-border bg-muted shadow-[var(--shadow-soft)]">
-              <div className="flex h-full w-full items-center justify-center text-center text-[11px] leading-tight text-muted-foreground">
-                Headshot
-                <br />
-                coming soon
-              </div>
-            </div>
+            <img
+              src={headshot.url}
+              alt="Portrait of Eva King-Senior"
+              width={400}
+              height={400}
+              className="h-36 w-36 shrink-0 rounded-full border border-border object-cover shadow-[var(--shadow-soft)]"
+            />
             <div>
               <h1 className="max-w-3xl text-5xl font-bold leading-[1.05] sm:text-6xl">
-                Hi, I&apos;m Eva King-Senior.
+                Eva King-Senior
               </h1>
+
               <p className="mt-4 text-lg text-muted-foreground">
                 Computer Science @ Bowdoin College
               </p>
