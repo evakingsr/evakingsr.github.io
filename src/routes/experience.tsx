@@ -27,7 +27,7 @@ const roles = [
   {
     title: "Full-Stack Developer Intern",
     org: "SEO Tech Developer",
-    period: "Summer 2026",
+    period: "May 2026 to August 2026",
     location: "Remote, New York City, NY",
     summary:
       "Intensive full-stack training program building production-style web apps in cross-functional SCRUM teams.",
