@@ -103,7 +103,7 @@ function Index() {
               <Github size={20} aria-hidden="true" />
             </a>
             <a
-              href="https://www.linkedin.com/in/evakingsenior/"
+              href="https://www.linkedin.com/in/evakingsenior"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn profile"
