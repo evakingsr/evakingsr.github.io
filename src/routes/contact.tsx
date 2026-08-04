@@ -23,9 +23,14 @@ export const Route = createFileRoute("/contact")({
 });
 
 const links = [
-  { label: "Email", value: "your.email@example.com", href: "mailto:your.email@example.com" },
-  { label: "LinkedIn", value: "linkedin.com/in/your-handle", href: "https://linkedin.com" },
-  { label: "GitHub", value: "github.com/your-handle", href: "https://github.com" },
+  { label: "Email", value: "evakingsr@gmail.com", href: "mailto:evakingsr@gmail.com" },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/evakingsenior",
+    href: "https://www.linkedin.com/in/evakingsenior/",
+  },
+  { label: "GitHub", value: "github.com/evakingsr", href: "https://github.com/evakingsr" },
+
 ];
 
 function ContactPage() {
