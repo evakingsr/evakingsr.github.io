@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Calendar, MapPin } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/site-layout";
 
 export const Route = createFileRoute("/experience")({
