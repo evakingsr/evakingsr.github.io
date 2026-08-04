@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Coffee, Github, Linkedin, Mail, MapPin, MessageSquareHeart, Sparkles } from "lucide-react";
+import { Github, GraduationCap, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/site-layout";
 
 export const Route = createFileRoute("/contact")({
@@ -48,9 +48,9 @@ const links = [
 ];
 
 const funFacts = [
-  { icon: MapPin, text: "Currently in Brunswick, Maine (and yes, it's cold)" },
-  { icon: Coffee, text: "Powered by iced coffee and a very full Google Calendar" },
-  { icon: Sparkles, text: "Ask me about backtracking, budgeting apps, or flag football" },
+  { icon: MapPin, text: "Originally from Queens and Brooklyn, NY" },
+  { icon: GraduationCap, text: "Now in Brunswick, Maine, studying CS at Bowdoin" },
+  { icon: Sparkles, text: "Ask me about budgeting apps, fintech, or flag football" },
 ];
 
 function ContactPage() {
@@ -66,10 +66,6 @@ function ContactPage() {
           <span className="inline-flex items-center gap-2 rounded-full bg-available-soft px-4 py-1.5 text-sm font-medium text-available-foreground">
             <span className="h-2 w-2 animate-pulse rounded-full bg-available" aria-hidden="true" />
             Available for summer 2027
-          </span>
-          <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm font-medium text-secondary-foreground">
-            <MessageSquareHeart className="size-4" aria-hidden="true" />
-            Usually replies within a day
           </span>
         </div>
 
