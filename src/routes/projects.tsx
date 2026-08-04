@@ -50,7 +50,33 @@ const projects = [
     repo: "https://github.com/thy-dye/Cura-Motus",
     demo: "https://cura-motus.vercel.app",
   },
+  {
+    title: "PennyPlan",
+    tagline: "AI-powered personal budgeting",
+    summary:
+      "A budgeting app that combines manual expense tracking, automated bank imports through Plaid, and AI-generated financial reports so users can see where their money goes and stay on track toward their goals.",
+    highlights: [
+      "Monthly budgets by category with budgeted vs. actual spending comparisons",
+      "Automatic bank transaction imports through the Plaid API",
+      "AI-generated spending reports and personalized budgeting tips",
+      "Interactive dashboard for visualizing spending trends over time",
+    ],
+    stack: [
+      "Python",
+      "Flask",
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Supabase",
+      "Plaid API",
+      "Google Gemini API",
+    ],
+    repo: "https://github.com/evakingsr/PennyPlan",
+    demo: null as string | null,
+  },
 ];
+
 
 function ProjectsPage() {
   return (
@@ -92,15 +118,17 @@ function ProjectsPage() {
                 ))}
               </ul>
               <div className="mt-7 flex flex-wrap gap-3">
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90"
-                >
-                  <ExternalLink className="size-4" aria-hidden />
-                  Live demo
-                </a>
+                {project.demo ? (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+                  >
+                    <ExternalLink className="size-4" aria-hidden />
+                    Live demo
+                  </a>
+                ) : null}
                 <a
                   href={project.repo}
                   target="_blank"
