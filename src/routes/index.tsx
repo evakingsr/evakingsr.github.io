@@ -46,6 +46,13 @@ const highlights = [
   },
 ];
 
+const campusRoles = [
+  { title: "Co-President", org: "Smart Woman Securities" },
+  { title: "Treasurer", org: "Bowdoin Women in Computer Science" },
+  { title: "Co-Founder & Captain", org: "Bowdoin Women's Club Flag Football" },
+  { title: "Operations Assistant", org: "Bowdoin Office of Admissions" },
+];
+
 function Index() {
   return (
     <SiteLayout>
