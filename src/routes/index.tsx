@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
 const skillGroups = [
   {
     group: "Programming Languages",
-    items: ["Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "Flask", "Wireframing"],
+    items: ["Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "Flask"],
   },
   {
     group: "Software & Tools",
@@ -156,7 +156,7 @@ function Index() {
           </div>
           <div className="surface-card relative overflow-hidden p-6">
             <div className="gradient-soft absolute inset-x-0 top-0 h-1.5" />
-            <h3 className="text-sm font-semibold uppercase tracking-wide">On campus</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wide">On campus leadership</h3>
             <ul className="mt-4 space-y-4 text-sm text-muted-foreground">
               {campusRoles.map((role) => (
                 <li key={role.org} className="border-l-2 border-secondary pl-3">
