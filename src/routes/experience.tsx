@@ -128,6 +128,19 @@ function ExperiencePage() {
           ))}
         </div>
       </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-14">
+        <h2 className="text-2xl font-bold">Certifications</h2>
+        <div className="mt-6 grid gap-5 sm:grid-cols-2">
+          {certifications.map((cert) => (
+            <div key={cert.title} className="surface-card p-6">
+              <h3 className="text-base font-semibold leading-snug">{cert.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{cert.issuer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
     </SiteLayout>
   );
 }
