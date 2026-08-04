@@ -171,26 +171,53 @@ function Index() {
 
       <section className="mx-auto max-w-5xl px-6 py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-          Strengths
+          Toolkit
         </p>
-        <h2 className="mt-2 text-3xl font-bold">What I bring</h2>
+        <h2 className="mt-2 text-3xl font-bold">Technical skills & certifications</h2>
+
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
-          {highlights.map((item, i) => (
+          {skillGroups.map((group) => (
             <article
-              key={item.title}
-              className="surface-card group p-6 transition-all hover:-translate-y-1 hover:border-primary/40"
+              key={group.group}
+              className="surface-card p-6 transition-all hover:-translate-y-1 hover:border-primary/40"
             >
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-sm font-semibold text-secondary-foreground">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-4 text-lg font-semibold transition-colors group-hover:text-primary">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+              <h3 className="text-sm font-semibold uppercase tracking-wide">{group.group}</h3>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-5 grid gap-5 sm:grid-cols-2">
+          {certifications.map((cert) => (
+            <article
+              key={cert.title}
+              className="surface-card relative overflow-hidden p-6 transition-all hover:-translate-y-1 hover:border-primary/40"
+            >
+              <div className="gradient-soft absolute inset-y-0 left-0 w-1.5" />
+              <div className="flex items-start gap-3">
+                <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
+                  <Award size={18} aria-hidden="true" />
+                </span>
+                <div>
+                  <h3 className="text-base font-semibold leading-snug">{cert.title}</h3>
+                  <p className="mt-1 text-sm font-medium text-primary">{cert.issuer}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{cert.meta}</p>
+                </div>
+              </div>
             </article>
           ))}
         </div>
       </section>
+
 
       <section className="mx-auto max-w-5xl px-6 pb-20">
         <div className="gradient-soft rounded-[var(--radius-3xl)] px-8 py-14 text-center shadow-[var(--shadow-soft)]">
