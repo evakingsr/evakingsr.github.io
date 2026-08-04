@@ -27,24 +27,30 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const highlights = [
+const skillGroups = [
   {
-    title: "Software Engineering",
-    body: "Python, TypeScript, and React for building full-stack apps from data model to interface.",
+    group: "Programming Languages",
+    items: ["Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "Flask", "Wireframing"],
   },
   {
-    title: "Financial Technology",
-    body: "Market data analysis, payments flows, and quantitative problem solving.",
-  },
-  {
-    title: "Data & Analytics",
-    body: "SQL, pandas, and visualization to turn messy datasets into clear decisions.",
-  },
-  {
-    title: "Collaboration",
-    body: "Hackathons, team projects, and campus organizations shipping under deadline.",
+    group: "Software & Tools",
+    items: ["Visual Studio Code", "IntelliJ IDEA CE", "IDLE", "Wing 101", "Codio"],
   },
 ];
+
+const certifications = [
+  {
+    title: "Intermediate Technical Interview Prep Course",
+    issuer: "CodePath",
+    meta: "Data structures, algorithms, and interview problem solving",
+  },
+  {
+    title: "HTML & CSS Certification",
+    issuer: "Girls Who Code",
+    meta: "Issued July 2023 | Wireframing, HTML, CSS",
+  },
+];
+
 
 const campusRoles = [
   { title: "Co-President", org: "Smart Woman Securities" },
