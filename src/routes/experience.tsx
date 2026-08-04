@@ -4,13 +4,13 @@ import { PageHeader, SiteLayout } from "@/components/site-layout";
 export const Route = createFileRoute("/experience")({
   head: () => ({
     meta: [
-      { title: "Experience & Skills — Eva King-Senior" },
+      { title: "Experience & Skills | Eva King-Senior" },
       {
         name: "description",
         content:
           "Work experience, education, coursework, leadership, and technical skills of Eva King-Senior, tech and fintech internship candidate.",
       },
-      { property: "og:title", content: "Experience & Skills — Eva King-Senior" },
+      { property: "og:title", content: "Experience & Skills | Eva King-Senior" },
       {
         property: "og:description",
         content: "Roles, education, and the technical toolkit behind my work.",
@@ -29,11 +29,11 @@ const roles = [
     org: "Company name",
     points: [
       "Add a one-line summary of what the team built and your role in it.",
-      "Quantify impact where you can — users served, latency cut, hours saved.",
+      "Quantify impact where you can: users served, latency cut, hours saved.",
     ],
   },
   {
-    period: "2025 — Present",
+    period: "2025 to Present",
     title: "Undergraduate Research / Campus Role",
     org: "Organization name",
     points: [
