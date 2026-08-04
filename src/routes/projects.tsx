@@ -90,7 +90,23 @@ const projects = [
     repo: "https://github.com/aloulou-dev/tagalong",
     demo: null as string | null,
   },
+  {
+    title: "Sudoku Solver",
+    tagline: "Iterative backtracking in Java",
+    summary:
+      "A Java program that reads a Sudoku puzzle from a text file and solves it using an iterative backtracking algorithm backed by an explicit stack of moves, rather than recursion. Built as a deep dive into backtracking and clean object-oriented design.",
+    highlights: [
+      "Iterative backtracking with an explicit move stack instead of recursion",
+      "Object-oriented design split across puzzle, move, and solver classes",
+      "Puzzles loaded from text files and validated against known solution files",
+      "Dedicated test class covering solvable and unsolvable boards",
+    ],
+    stack: ["Java", "Data structures", "Backtracking algorithms", "IntelliJ IDEA"],
+    repo: "https://github.com/evakingsr/Sudoku-Solver",
+    demo: null as string | null,
+  },
 ];
+
 
 
 
