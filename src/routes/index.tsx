@@ -54,16 +54,24 @@ function Index() {
           className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
         <div className="relative mx-auto max-w-5xl px-6 py-24 sm:py-32">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Tech &amp; fintech internships
-          </p>
-          <h1 className="mt-4 max-w-3xl text-5xl font-bold leading-[1.05] sm:text-6xl">
-            Hi, I&apos;m Eva King-Senior.
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            I build software at the intersection of engineering and finance — and I&apos;m looking
-            for an internship where I can keep doing exactly that.
-          </p>
+          <div className="flex flex-col items-start gap-8 sm:flex-row sm:items-center">
+            <div className="h-32 w-32 shrink-0 overflow-hidden rounded-full border border-border bg-muted shadow-[var(--shadow-soft)]">
+              <div className="flex h-full w-full items-center justify-center text-center text-[11px] leading-tight text-muted-foreground">
+                Headshot
+                <br />
+                coming soon
+              </div>
+            </div>
+            <div>
+              <h1 className="max-w-3xl text-5xl font-bold leading-[1.05] sm:text-6xl">
+                Hi, I&apos;m Eva King-Senior.
+              </h1>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Computer Science @ Bowdoin College
+              </p>
+            </div>
+          </div>
+
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               to="/projects"
