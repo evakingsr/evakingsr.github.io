@@ -138,10 +138,12 @@ const certifications = [
   {
     title: "Intermediate Technical Interview Prep Course",
     issuer: "CodePath",
+    detail: "Data structures, algorithms, and interview problem solving",
   },
   {
     title: "HTML & CSS Certification",
-    issuer: "Girls Who Code, issued July 2023",
+    issuer: "Girls Who Code",
+    detail: "Issued July 2023 | Wireframing, HTML, CSS",
   },
 ];
 
