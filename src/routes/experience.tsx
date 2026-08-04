@@ -50,10 +50,25 @@ const education = {
 };
 
 const skills = [
-  { group: "Languages", items: ["Python", "TypeScript", "SQL", "Java"] },
-  { group: "Frameworks", items: ["React", "Node.js", "pandas", "FastAPI"] },
-  { group: "Tools", items: ["Git", "Docker", "PostgreSQL", "Excel / VBA"] },
+  { group: "Languages", items: ["Java", "Python", "JavaScript", "HTML", "CSS", "SQL"] },
+  { group: "Frameworks & Methods", items: ["Flask", "Wireframing"] },
+  {
+    group: "Software",
+    items: ["Visual Studio Code", "IntelliJ IDEA CE", "IDLE", "Wing 101", "Codio"],
+  },
 ];
+
+const certifications = [
+  {
+    title: "Intermediate Technical Interview Prep Course",
+    issuer: "CodePath",
+  },
+  {
+    title: "HTML & CSS Certification",
+    issuer: "Girls Who Code, issued July 2023",
+  },
+];
+
 
 function ExperiencePage() {
   return (
