@@ -96,7 +96,9 @@ const education = [
     period: "Expected May 2028",
     location: "Brunswick, ME",
     courses: [
-      "Data Structures I & II",
+      "Introduction to Digital and Computational Studies",
+      "Data Structures I",
+      "Data Structures II",
       "Human-Computer Interaction",
       "Algorithms (Fall 2026)",
       "Math Foundations of Computer Science (Fall 2026)",
