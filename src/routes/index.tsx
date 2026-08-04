@@ -148,7 +148,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 pb-4">
+      <section className="mx-auto max-w-5xl px-6 pb-4 pt-12">
         <div className="gradient-soft rounded-[var(--radius-3xl)] px-8 py-14 text-center shadow-[var(--shadow-soft)]">
           <h2 className="text-3xl font-bold">Recruiting for summer internships?</h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
