@@ -27,7 +27,7 @@ const roles = [
   {
     title: "Full-Stack Developer Intern",
     org: "SEO Tech Developer",
-    period: "Summer 2026",
+    period: "May 2026 to August 2026",
     location: "Remote, New York City, NY",
     summary:
       "Intensive full-stack training program building production-style web apps in cross-functional SCRUM teams.",
@@ -50,18 +50,6 @@ const roles = [
     ],
   },
   {
-    title: "Admissions Intern & Operations Liaison",
-    org: "Bowdoin College",
-    period: "May 2025 to Aug 2025",
-    location: "Brunswick, ME",
-    summary:
-      "Researched admissions policy questions and led front-desk and campus tour operations.",
-    points: [
-      "Researched the use of AI in college applications and produced a briefing to inform ethical admissions strategy",
-      "Led 100+ campus tours and trained six interns, improving front desk workflows and consistency",
-    ],
-  },
-  {
     title: "Winter Intern",
     org: "Hunters Point Parks Conservancy",
     period: "Dec 2025 to Jan 2026",
@@ -73,6 +61,19 @@ const roles = [
       "Prepared environmental and water-quality datasets for public-facing web integration",
     ],
   },
+  {
+    title: "Admissions Intern & Operations Liaison",
+    org: "Bowdoin College",
+    period: "May 2025 to Aug 2025",
+    location: "Brunswick, ME",
+    summary:
+      "Researched admissions policy questions and led front-desk and campus tour operations.",
+    points: [
+      "Researched the use of AI in college applications and produced a briefing to inform ethical admissions strategy",
+      "Led 100+ campus tours and trained six interns, improving front desk workflows and consistency",
+    ],
+  },
+
   {
     title: "Summer Intern",
     org: "Hunters Point Parks Conservancy",
