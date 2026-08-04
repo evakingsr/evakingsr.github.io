@@ -45,6 +45,9 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-berry: var(--berry);
   --color-berry-foreground: var(--berry-foreground);
+  --color-available: var(--available);
+  --color-available-foreground: var(--available-foreground);
+  --color-available-soft: var(--available-soft);
 
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
