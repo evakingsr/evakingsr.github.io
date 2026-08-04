@@ -89,11 +89,39 @@ const roles = [
 ];
 
 
-const education = {
-  school: "University name",
-  degree: "B.S. in Computer Science, expected 2028",
-  detail: "Relevant coursework: Data Structures, Algorithms, Databases, Financial Markets.",
-};
+const education = [
+  {
+    school: "Bowdoin College",
+    degree: "Bachelor of Arts in Computer Science, Minor in Latin American & Caribbean Studies",
+    period: "Expected May 2028",
+    location: "Brunswick, ME",
+    courses: [
+      "Data Structures I & II",
+      "Human-Computer Interaction",
+      "Algorithms (Fall 2026)",
+      "Math Foundations of Computer Science (Fall 2026)",
+    ],
+  },
+  {
+    school: "DIS Copenhagen",
+    degree: "Study Abroad, Spring 2027",
+    period: "Spring 2027",
+    location: "Copenhagen, Denmark",
+    courses: ["Complex Networks (core course)", "Artificial Intelligence"],
+  },
+  {
+    school: "Bard College, via Bard High School Early College",
+    degree: "Associate of Arts in Liberal Arts and Science",
+    period: "June 2024",
+    location: "Queens, NY",
+    courses: [
+      "Calculus-Based Physics I & II",
+      "Physics: Sound & Music",
+      "Physics: Spacetime & Lightspeed",
+      "Calculus I & II",
+    ],
+  },
+];
 
 const skills = [
   { group: "Languages", items: ["Java", "Python", "JavaScript", "HTML", "CSS", "SQL"] },
@@ -170,11 +198,29 @@ function ExperiencePage() {
 
       <section className="mx-auto max-w-5xl px-6 pb-14">
         <h2 className="text-2xl font-bold">Education</h2>
-        <article className="surface-card mt-6 p-6">
-          <h3 className="text-lg font-semibold">{education.school}</h3>
-          <p className="mt-1 text-sm text-muted-foreground">{education.degree}</p>
-          <p className="mt-3 text-sm text-muted-foreground">{education.detail}</p>
-        </article>
+        <div className="mt-6 space-y-5">
+          {education.map((school) => (
+            <article key={school.school} className="surface-card p-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="text-lg font-semibold">{school.school}</h3>
+                <p className="text-sm text-muted-foreground">{school.period}</p>
+              </div>
+              <p className="mt-1 text-sm font-medium text-primary">{school.degree}</p>
+              <p className="mt-1 text-sm text-muted-foreground">{school.location}</p>
+              <p className="mt-4 text-sm font-semibold">Relevant coursework:</p>
+              <ul className="mt-2 flex flex-wrap gap-2">
+                {school.courses.map((course) => (
+                  <li
+                    key={course}
+                    className="rounded-full bg-secondary px-3 py-1 text-xs text-secondary-foreground"
+                  >
+                    {course}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-6">
