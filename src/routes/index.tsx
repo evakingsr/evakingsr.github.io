@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroGradient from "@/assets/hero-gradient.jpg";
 import headshot from "@/assets/headshot.jpg.asset.json";
+import { Github, Linkedin, Mail } from "lucide-react";
+
 
 import { SiteLayout } from "@/components/site-layout";
 
@@ -75,7 +77,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               to="/projects"
               className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-opacity hover:opacity-90"
@@ -90,30 +92,34 @@ function Index() {
             </Link>
           </div>
 
-          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
             <a
               href="https://github.com/evakingsr"
               target="_blank"
               rel="noreferrer"
-              className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+              aria-label="GitHub profile"
+              className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-colors hover:bg-muted hover:text-primary"
             >
-              GitHub
+              <Github size={20} aria-hidden="true" />
             </a>
             <a
               href="https://www.linkedin.com/in/evakingsenior/"
               target="_blank"
               rel="noreferrer"
-              className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+              aria-label="LinkedIn profile"
+              className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-colors hover:bg-muted hover:text-primary"
             >
-              LinkedIn
+              <Linkedin size={20} aria-hidden="true" />
             </a>
             <a
               href="mailto:evakingsr@gmail.com"
-              className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+              aria-label="Email Eva King-Senior"
+              className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-colors hover:bg-muted hover:text-primary"
             >
-              evakingsr@gmail.com
+              <Mail size={20} aria-hidden="true" />
             </a>
           </div>
+
 
         </div>
       </section>
