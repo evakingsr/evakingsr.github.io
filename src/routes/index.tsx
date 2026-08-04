@@ -29,29 +29,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const skillGroups = [
-  {
-    group: "Programming Languages",
-    items: ["Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "Flask"],
-  },
-  {
-    group: "Software & Tools",
-    items: ["Visual Studio Code", "IntelliJ IDEA CE", "IDLE", "Wing 101", "Codio"],
-  },
-];
-
-const certifications = [
-  {
-    title: "Intermediate Technical Interview Prep Course",
-    issuer: "CodePath",
-    meta: "Data structures, algorithms, and interview problem solving",
-  },
-  {
-    title: "HTML & CSS Certification",
-    issuer: "Girls Who Code",
-    meta: "Issued July 2023 | Wireframing, HTML, CSS",
-  },
-];
 
 
 const campusRoles = [
