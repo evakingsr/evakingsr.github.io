@@ -54,8 +54,8 @@ export function GetInTouch() {
           I am seeking summer 2027 software and fintech internships, and I would love to talk about
           how I can contribute to your team.
         </p>
-        <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm font-medium text-secondary-foreground">
-          <span className="h-2 w-2 rounded-full bg-primary" aria-hidden="true" />
+        <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-available-soft px-4 py-1.5 text-sm font-medium text-available-foreground">
+          <span className="h-2 w-2 rounded-full bg-available" aria-hidden="true" />
           Available for summer 2027
         </span>
       </div>
