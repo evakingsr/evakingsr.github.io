@@ -24,24 +24,68 @@ export const Route = createFileRoute("/experience")({
 
 const roles = [
   {
+    title: "Full-Stack Developer Intern",
+    org: "SEO Tech Developer",
     period: "Summer 2026",
-    title: "Software Engineering Intern",
-    org: "Company name",
+    location: "Remote, New York City, NY",
+    summary:
+      "Intensive full-stack training program building production-style web apps in cross-functional SCRUM teams.",
     points: [
-      "Add a one-line summary of what the team built and your role in it.",
-      "Quantify impact where you can: users served, latency cut, hours saved.",
+      "Completed intensive training in data structures, algorithms, technical interviewing, and full-stack development",
+      "Designed, built, and tested three full-stack web apps in cross-functional SCRUM teams using React, Flask, and Supabase, integrating OpenAI, Gemini, Plaid, and MediaPipe APIs",
+      "Architected the backend for Cura-Motus, an AI powered physical therapy adherence app using real-time pose estimation, awarded Best Architecture and Integration for the program's capstone project",
     ],
   },
   {
-    period: "2025 to Present",
-    title: "Undergraduate Research / Campus Role",
-    org: "Organization name",
+    title: "Admissions Operations Assistant",
+    org: "Bowdoin College",
+    period: "Sept 2025 to Present",
+    location: "Brunswick, ME",
+    summary:
+      "Support daily admissions operations and serve as a first point of contact for prospective students and families.",
     points: [
-      "Describe the technical problem you worked on.",
-      "Note the tools and languages you used day to day.",
+      "Manage application materials and records to support daily admissions operations",
+      "Serve as first point of contact for prospective students and families, providing accurate admissions information",
+    ],
+  },
+  {
+    title: "Admissions Intern & Operations Liaison",
+    org: "Bowdoin College",
+    period: "May 2025 to Aug 2025",
+    location: "Brunswick, ME",
+    summary:
+      "Researched admissions policy questions and led front-desk and campus tour operations.",
+    points: [
+      "Researched the use of AI in college applications and produced a briefing to inform ethical admissions strategy",
+      "Led 100+ campus tours and trained six interns, improving front desk workflows and consistency",
+    ],
+  },
+  {
+    title: "Winter Intern",
+    org: "Hunters Point Parks Conservancy",
+    period: "Dec 2025 to Jan 2026",
+    location: "Long Island City, NY",
+    summary:
+      "Handled web content migration and prepared environmental datasets for public-facing use.",
+    points: [
+      "Migrated and restructured blog content across Squarespace sites, preserving data integrity and reducing platform costs",
+      "Prepared environmental and water-quality datasets for public-facing web integration",
+    ],
+  },
+  {
+    title: "Summer Intern",
+    org: "Hunters Point Parks Conservancy",
+    period: "May 2024 to Aug 2024",
+    location: "Long Island City, NY",
+    summary:
+      "Improved website accessibility and navigation while managing public program content.",
+    points: [
+      "Updated and wireframed websites, improving accessibility, navigation, and content visibility",
+      "Managed content updates and page structure for public-facing programs and events",
     ],
   },
 ];
+
 
 const education = {
   school: "University name",
