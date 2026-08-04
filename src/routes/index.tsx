@@ -86,7 +86,7 @@ function Index() {
             </Link>
             <Link
               to="/contact"
-              className="rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-accent-foreground shadow-[var(--shadow-soft)] transition-opacity hover:opacity-90"
+              className="rounded-full bg-berry px-5 py-2.5 text-sm font-medium text-berry-foreground shadow-[var(--shadow-soft)] transition-opacity hover:opacity-90"
             >
               Get in touch
             </Link>
