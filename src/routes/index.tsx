@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
 const highlights = [
   {
     title: "Software Engineering",
-    body: "Python, TypeScript, and React — building full-stack apps from data model to interface.",
+    body: "Python, TypeScript, and React for building full-stack apps from data model to interface.",
   },
   {
     title: "Financial Technology",
@@ -52,6 +52,7 @@ const campusRoles = [
   { title: "Co-Founder & Captain", org: "Bowdoin Women's Club Flag Football" },
   { title: "Operations Assistant", org: "Bowdoin Office of Admissions" },
 ];
+
 
 function Index() {
   return (
