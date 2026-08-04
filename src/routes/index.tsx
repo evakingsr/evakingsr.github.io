@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroGradient from "@/assets/hero-gradient.jpg";
+import headshot from "@/assets/headshot.jpg.asset.json";
+
 import { SiteLayout } from "@/components/site-layout";
 
 export const Route = createFileRoute("/")({
