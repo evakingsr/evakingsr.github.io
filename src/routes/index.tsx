@@ -46,6 +46,13 @@ const highlights = [
   },
 ];
 
+const campusRoles = [
+  { title: "Co-President", org: "Smart Woman Securities" },
+  { title: "Treasurer", org: "Bowdoin Women in Computer Science" },
+  { title: "Co-Founder & Captain", org: "Bowdoin Women's Club Flag Football" },
+  { title: "Operations Assistant", org: "Bowdoin Office of Admissions" },
+];
+
 function Index() {
   return (
     <SiteLayout>
@@ -121,6 +128,37 @@ function Index() {
           </div>
 
 
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pt-20">
+        <h2 className="text-2xl font-bold">About me</h2>
+        <div className="mt-8 grid gap-8 md:grid-cols-[1.4fr_1fr]">
+          <div className="space-y-4 text-muted-foreground">
+            <p>
+              I&apos;m a junior at Bowdoin College majoring in Computer Science with a minor in
+              Latin American and Caribbean Studies. I&apos;m drawn to work that pairs
+              problem-solving and building with real-world impact — especially in fintech and
+              data, where good engineering and clear analysis change how people make decisions.
+            </p>
+            <p>
+              Just as much as the technical side, I care about the people I build with. Between
+              leading campus organizations and collaborating on team projects, I&apos;ve learned
+              that the best solutions come from groups that communicate well and share ownership.
+            </p>
+          </div>
+          <div className="surface-card p-6">
+            <h3 className="text-sm font-semibold uppercase tracking-wide">On campus</h3>
+            <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+              {campusRoles.map((role) => (
+                <li key={role.org}>
+                  <span className="font-medium text-foreground">{role.title}</span>
+                  <br />
+                  {role.org}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
