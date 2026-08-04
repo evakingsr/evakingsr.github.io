@@ -74,7 +74,7 @@ function Index() {
               to="/projects"
               className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 hover:opacity-90"
             >
-              See my work
+              View my work
             </Link>
             <Link
               to="/contact"
