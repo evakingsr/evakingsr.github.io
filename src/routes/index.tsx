@@ -148,11 +148,7 @@ function Index() {
         </div>
       </section>
 
-      <GetInTouch />
-
-
-
-      <section className="mx-auto max-w-5xl px-6 pb-20">
+      <section className="mx-auto max-w-5xl px-6 pb-4">
         <div className="gradient-soft rounded-[var(--radius-3xl)] px-8 py-14 text-center shadow-[var(--shadow-soft)]">
           <h2 className="text-3xl font-bold">Recruiting for summer internships?</h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
@@ -166,14 +162,16 @@ function Index() {
               View experience
             </Link>
             <Link
-              to="/contact"
+              to="/projects"
               className="rounded-full border border-border bg-card px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5 hover:bg-muted"
             >
-              Contact me
+              View projects
             </Link>
           </div>
         </div>
       </section>
+
+      <GetInTouch />
     </SiteLayout>
   );
 }
