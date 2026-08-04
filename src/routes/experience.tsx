@@ -252,9 +252,21 @@ function ExperiencePage() {
         <h2 className="text-2xl font-bold">Certifications</h2>
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
           {certifications.map((cert) => (
-            <div key={cert.title} className="surface-card p-6">
-              <h3 className="text-base font-semibold leading-snug">{cert.title}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{cert.issuer}</p>
+            <div
+              key={cert.title}
+              className="surface-card relative overflow-hidden p-6 transition-all hover:-translate-y-1 hover:border-primary/40"
+            >
+              <span className="gradient-soft absolute inset-y-0 left-0 w-1.5" aria-hidden="true" />
+              <div className="flex items-start gap-4">
+                <span className="grid size-11 shrink-0 place-items-center rounded-full bg-accent/60 text-accent-foreground">
+                  <Award size={20} aria-hidden="true" />
+                </span>
+                <div className="min-w-0">
+                  <h3 className="text-base font-bold leading-snug">{cert.title}</h3>
+                  <p className="mt-0.5 text-sm font-semibold text-primary">{cert.issuer}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{cert.detail}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
