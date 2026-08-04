@@ -89,6 +89,32 @@ function Index() {
               Get in touch
             </Link>
           </div>
+
+          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            <a
+              href="https://github.com/evakingsr"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/evakingsenior/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:evakingsr@gmail.com"
+              className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+            >
+              evakingsr@gmail.com
+            </a>
+          </div>
+
         </div>
       </section>
 
