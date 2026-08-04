@@ -4,13 +4,13 @@ import { PageHeader, SiteLayout } from "@/components/site-layout";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Eva King-Senior" },
+      { title: "Contact | Eva King-Senior" },
       {
         name: "description",
         content:
           "Reach Eva King-Senior by email or LinkedIn about tech and financial technology internship opportunities.",
       },
-      { property: "og:title", content: "Contact — Eva King-Senior" },
+      { property: "og:title", content: "Contact | Eva King-Senior" },
       {
         property: "og:description",
         content: "Email and LinkedIn for internship conversations.",

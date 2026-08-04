@@ -9,13 +9,13 @@ import { SiteLayout } from "@/components/site-layout";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Eva King-Senior — Tech & Fintech Portfolio" },
+      { title: "Eva King-Senior | Tech & Fintech Portfolio" },
       {
         name: "description",
         content:
           "Portfolio of Eva King-Senior: software and fintech projects, experience, skills, and contact details for internship recruiters.",
       },
-      { property: "og:title", content: "Eva King-Senior — Tech & Fintech Portfolio" },
+      { property: "og:title", content: "Eva King-Senior | Tech & Fintech Portfolio" },
       {
         property: "og:description",
         content: "Projects, experience, and skills from an aspiring tech and fintech intern.",
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
 const highlights = [
   {
     title: "Software Engineering",
-    body: "Python, TypeScript, and React — building full-stack apps from data model to interface.",
+    body: "Python, TypeScript, and React for building full-stack apps from data model to interface.",
   },
   {
     title: "Financial Technology",
@@ -53,6 +53,7 @@ const campusRoles = [
   { title: "Operations Assistant", org: "Bowdoin Office of Admissions" },
 ];
 
+
 function Index() {
   return (
     <SiteLayout>
@@ -64,36 +65,35 @@ function Index() {
           height={1200}
           className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
-        <div className="relative mx-auto max-w-5xl px-6 py-24 sm:py-32">
-          <div className="flex flex-col items-start gap-8 sm:flex-row sm:items-center">
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background" />
+        <div className="relative mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
+          <div className="mx-auto w-fit rounded-full bg-card/70 p-1.5 shadow-[var(--shadow-soft)] ring-1 ring-border backdrop-blur">
             <img
               src={headshot.url}
               alt="Portrait of Eva King-Senior"
               width={400}
               height={400}
-              className="h-36 w-36 shrink-0 rounded-full border border-border object-cover shadow-[var(--shadow-soft)]"
+              className="h-40 w-40 rounded-full object-cover"
             />
-            <div>
-              <h1 className="max-w-3xl text-5xl font-bold leading-[1.05] sm:text-6xl">
-                Eva King-Senior
-              </h1>
-
-              <p className="mt-4 text-lg text-muted-foreground">
-                Computer Science @ Bowdoin College
-              </p>
-            </div>
           </div>
+
+          <h1 className="mt-8 text-5xl font-bold leading-[1.05] sm:text-6xl">
+            Eva King-Senior
+          </h1>
+          <p className="mt-4 inline-flex rounded-full border border-border bg-card/70 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur">
+            Computer Science @ Bowdoin College
+          </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               to="/projects"
-              className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-opacity hover:opacity-90"
+              className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 hover:opacity-90"
             >
               See my work
             </Link>
             <Link
               to="/contact"
-              className="rounded-full bg-berry px-5 py-2.5 text-sm font-medium text-berry-foreground shadow-[var(--shadow-soft)] transition-opacity hover:opacity-90"
+              className="rounded-full bg-berry px-6 py-3 text-sm font-medium text-berry-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 hover:opacity-90"
             >
               Get in touch
             </Link>
@@ -105,7 +105,7 @@ function Index() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub profile"
-              className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-colors hover:bg-muted hover:text-primary"
+              className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:bg-muted hover:text-primary"
             >
               <Github size={20} aria-hidden="true" />
             </a>
@@ -114,31 +114,32 @@ function Index() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn profile"
-              className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-colors hover:bg-muted hover:text-primary"
+              className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:bg-muted hover:text-primary"
             >
               <Linkedin size={20} aria-hidden="true" />
             </a>
             <a
               href="mailto:evakingsr@gmail.com"
               aria-label="Email Eva King-Senior"
-              className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-colors hover:bg-muted hover:text-primary"
+              className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:bg-muted hover:text-primary"
             >
               <Mail size={20} aria-hidden="true" />
             </a>
           </div>
-
-
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pt-20">
-        <h2 className="text-2xl font-bold">About me</h2>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          About
+        </p>
+        <h2 className="mt-2 text-3xl font-bold">About me</h2>
         <div className="mt-8 grid gap-8 md:grid-cols-[1.4fr_1fr]">
-          <div className="space-y-4 text-muted-foreground">
+          <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
               I&apos;m a junior at Bowdoin College majoring in Computer Science with a minor in
               Latin American and Caribbean Studies. I&apos;m drawn to work that pairs
-              problem-solving and building with real-world impact — especially in fintech and
+              problem-solving and building with real-world impact, especially in fintech and
               data, where good engineering and clear analysis change how people make decisions.
             </p>
             <p>
@@ -147,13 +148,13 @@ function Index() {
               that the best solutions come from groups that communicate well and share ownership.
             </p>
           </div>
-          <div className="surface-card p-6">
+          <div className="surface-card relative overflow-hidden p-6">
+            <div className="gradient-soft absolute inset-x-0 top-0 h-1.5" />
             <h3 className="text-sm font-semibold uppercase tracking-wide">On campus</h3>
-            <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+            <ul className="mt-4 space-y-4 text-sm text-muted-foreground">
               {campusRoles.map((role) => (
-                <li key={role.org}>
-                  <span className="font-medium text-foreground">{role.title}</span>
-                  <br />
+                <li key={role.org} className="border-l-2 border-secondary pl-3">
+                  <span className="block font-medium text-foreground">{role.title}</span>
                   {role.org}
                 </li>
               ))}
@@ -163,33 +164,44 @@ function Index() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-20">
-        <h2 className="text-2xl font-bold">What I bring</h2>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          Strengths
+        </p>
+        <h2 className="mt-2 text-3xl font-bold">What I bring</h2>
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
-          {highlights.map((item) => (
-            <article key={item.title} className="surface-card p-6">
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{item.body}</p>
+          {highlights.map((item, i) => (
+            <article
+              key={item.title}
+              className="surface-card group p-6 transition-all hover:-translate-y-1 hover:border-primary/40"
+            >
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-sm font-semibold text-secondary-foreground">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="mt-4 text-lg font-semibold transition-colors group-hover:text-primary">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6">
-        <div className="gradient-soft rounded-[var(--radius-3xl)] px-8 py-12 text-center">
-          <h2 className="text-2xl font-bold">Recruiting for summer internships?</h2>
+      <section className="mx-auto max-w-5xl px-6 pb-20">
+        <div className="gradient-soft rounded-[var(--radius-3xl)] px-8 py-14 text-center shadow-[var(--shadow-soft)]">
+          <h2 className="text-3xl font-bold">Recruiting for summer internships?</h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
             My experience, coursework, and project write-ups are a click away.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Link
               to="/experience"
-              className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 hover:opacity-90"
             >
               View experience
             </Link>
             <Link
               to="/contact"
-              className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium transition-colors hover:bg-muted"
+              className="rounded-full border border-border bg-card px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5 hover:bg-muted"
             >
               Contact me
             </Link>
@@ -199,3 +211,4 @@ function Index() {
     </SiteLayout>
   );
 }
+

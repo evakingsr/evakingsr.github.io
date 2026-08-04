@@ -4,13 +4,13 @@ import { PageHeader, SiteLayout } from "@/components/site-layout";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — Eva King-Senior" },
+      { title: "Projects | Eva King-Senior" },
       {
         name: "description",
         content:
           "Selected software and fintech projects by Eva King-Senior, with the problem, stack, and outcome for each build.",
       },
-      { property: "og:title", content: "Projects — Eva King-Senior" },
+      { property: "og:title", content: "Projects | Eva King-Senior" },
       {
         property: "og:description",
         content: "Selected builds spanning full-stack engineering, data, and financial technology.",
@@ -37,12 +37,12 @@ const projects = [
   },
   {
     title: "Hackathon Build",
-    summary: "A 36-hour team project — add the problem you solved and what you owned.",
+    summary: "A 36-hour team project. Add the problem you solved and what you owned.",
     stack: ["Next.js", "Node.js"],
   },
   {
     title: "Course Project",
-    summary: "A class assignment worth showing — describe the design decisions you made.",
+    summary: "A class assignment worth showing. Describe the design decisions you made.",
     stack: ["Java", "SQL"],
   },
 ];
@@ -53,7 +53,7 @@ function ProjectsPage() {
       <PageHeader
         eyebrow="Selected work"
         title="Projects"
-        description="Things I've built to learn faster — each one with a real problem behind it."
+        description="Things I've built to learn faster, each one with a real problem behind it."
       />
       <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="grid gap-5 sm:grid-cols-2">
