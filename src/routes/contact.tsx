@@ -49,8 +49,11 @@ const links = [
 
 const funFacts = [
   { icon: MapPin, text: "Originally from Queens and Brooklyn, NY" },
-  { icon: GraduationCap, text: "Now in Brunswick, Maine, studying CS at Bowdoin" },
-  { icon: Sparkles, text: "Ask me about budgeting apps, fintech, or flag football" },
+  {
+    icon: GraduationCap,
+    text: "I will defend Bowdoin dining hall's number one ranking to anyone who asks (go Polar Bears)",
+  },
+  { icon: Sparkles, text: "Ask me about binary trees, flag football, or the best bagel in NYC" },
 ];
 
 function ContactPage() {
