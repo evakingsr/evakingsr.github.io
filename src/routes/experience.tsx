@@ -125,22 +125,45 @@ function ExperiencePage() {
 
       <section className="mx-auto max-w-5xl px-6 py-14">
         <h2 className="text-2xl font-bold">Experience</h2>
-        <div className="mt-8 space-y-5">
+        <div className="mt-8 space-y-6">
           {roles.map((role) => (
-            <article key={role.title} className="surface-card p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                {role.period}
-              </p>
-              <h3 className="mt-2 text-lg font-semibold">{role.title}</h3>
-              <p className="text-sm text-muted-foreground">{role.org}</p>
-              <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm text-muted-foreground">
-                {role.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
+            <article
+              key={`${role.org}-${role.title}`}
+              className="surface-card p-6 transition-all hover:-translate-y-1 hover:border-primary/40 sm:p-8"
+            >
+              <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_1.6fr] md:gap-10">
+                <div className="min-w-0">
+                  <h3 className="text-xl font-bold leading-snug text-primary">{role.title}</h3>
+                  <p className="mt-1 text-base font-semibold">{role.org}</p>
+                  <p className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                    <Calendar size={15} className="shrink-0" aria-hidden="true" />
+                    {role.period}
+                  </p>
+                  <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
+                    <MapPin size={15} className="shrink-0" aria-hidden="true" />
+                    {role.location}
+                  </p>
+                </div>
+                <div className="min-w-0">
+                  <p className="text-sm leading-relaxed text-muted-foreground">{role.summary}</p>
+                  <p className="mt-5 text-sm font-semibold">Key achievements:</p>
+                  <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-muted-foreground">
+                    {role.points.map((point) => (
+                      <li key={point} className="flex gap-3">
+                        <span
+                          className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-berry"
+                          aria-hidden="true"
+                        />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </article>
           ))}
         </div>
+
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pb-14">
