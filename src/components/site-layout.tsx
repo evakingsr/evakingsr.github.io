@@ -34,7 +34,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
       <footer className="mt-24 border-t border-border/60">
         <div className="mx-auto flex max-w-5xl flex-col gap-2 px-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Eva King-Senior</p>
-          <p>Rising junior at Bowdoin College · Seeking Summer 2027 internships</p>
+          <p>Junior at Bowdoin College · Seeking Summer 2027 internships</p>
         </div>
       </footer>
     </div>
