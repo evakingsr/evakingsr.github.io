@@ -1,24 +1,120 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import heroGradient from "@/assets/hero-gradient.jpg";
+import { SiteLayout } from "@/components/site-layout";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Eva King-Senior — Tech & Fintech Portfolio" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Eva King-Senior: software and fintech projects, experience, skills, and contact details for internship recruiters.",
+      },
+      { property: "og:title", content: "Eva King-Senior — Tech & Fintech Portfolio" },
+      {
+        property: "og:description",
+        content: "Projects, experience, and skills from an aspiring tech and fintech intern.",
+      },
+      { property: "og:url", content: "/" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const highlights = [
+  {
+    title: "Software Engineering",
+    body: "Python, TypeScript, and React — building full-stack apps from data model to interface.",
+  },
+  {
+    title: "Financial Technology",
+    body: "Market data analysis, payments flows, and quantitative problem solving.",
+  },
+  {
+    title: "Data & Analytics",
+    body: "SQL, pandas, and visualization to turn messy datasets into clear decisions.",
+  },
+  {
+    title: "Collaboration",
+    body: "Hackathons, team projects, and campus organizations shipping under deadline.",
+  },
+];
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout>
+      <section className="relative overflow-hidden">
+        <img
+          src={heroGradient}
+          alt=""
+          width={1600}
+          height={1200}
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
+        />
+        <div className="relative mx-auto max-w-5xl px-6 py-24 sm:py-32">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            Tech &amp; fintech internships
+          </p>
+          <h1 className="mt-4 max-w-3xl text-5xl font-bold leading-[1.05] sm:text-6xl">
+            Hi, I&apos;m Eva King-Senior.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+            I build software at the intersection of engineering and finance — and I&apos;m looking
+            for an internship where I can keep doing exactly that.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              to="/projects"
+              className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-opacity hover:opacity-90"
+            >
+              See my work
+            </Link>
+            <Link
+              to="/contact"
+              className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium transition-colors hover:bg-muted"
+            >
+              Get in touch
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        <h2 className="text-2xl font-bold">What I bring</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2">
+          {highlights.map((item) => (
+            <article key={item.title} className="surface-card p-6">
+              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6">
+        <div className="gradient-soft rounded-[var(--radius-3xl)] px-8 py-12 text-center">
+          <h2 className="text-2xl font-bold">Recruiting for summer internships?</h2>
+          <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
+            My experience, coursework, and project write-ups are a click away.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Link
+              to="/experience"
+              className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              View experience
+            </Link>
+            <Link
+              to="/contact"
+              className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium transition-colors hover:bg-muted"
+            >
+              Contact me
+            </Link>
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
   );
 }
