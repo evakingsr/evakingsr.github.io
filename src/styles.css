@@ -91,6 +91,9 @@
   --accent-foreground: oklch(0.35 0.09 340);
   --berry: oklch(0.6 0.15 355);
   --berry-foreground: oklch(0.99 0.005 340);
+  --available: oklch(0.62 0.13 155);
+  --available-foreground: oklch(0.35 0.08 155);
+  --available-soft: oklch(0.94 0.05 155);
 
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
