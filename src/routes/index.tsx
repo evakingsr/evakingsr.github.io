@@ -122,15 +122,18 @@ function Index() {
         <div className="mt-8 grid gap-8 md:grid-cols-[1.4fr_1fr]">
           <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              I&apos;m a junior at Bowdoin College majoring in Computer Science with a minor in
-              Latin American and Caribbean Studies. I&apos;m drawn to work that pairs
-              problem-solving and building with real-world impact, especially in fintech and
-              data, where good engineering and clear analysis change how people make decisions.
+              Hi! I&apos;m Eva, a junior at Bowdoin College majoring in Computer Science with a minor in
+              Latin American and Caribbean Studies. On campus, I&apos;m Co-President of Smart Woman
+              Securities, treasurer of Bowdoin Women in Computer Science, co-founder and captain of
+              Bowdoin Women&apos;s Club Flag Football team, and Operations Assistant in the Office of
+              Admissions.
             </p>
             <p>
-              Just as much as the technical side, I care about the people I build with. Between
-              leading campus organizations and collaborating on team projects, I&apos;ve learned
-              that the best solutions come from groups that communicate well and share ownership.
+              I&apos;m drawn to using code to solve real problems and build things people can actually
+              use, and I value the collaboration that comes with team projects and campus leadership
+              as much as the technical work itself. I build primarily in Java, Python, and
+              JavaScript, and I&apos;m currently looking for summer internships in fintech and data
+              analysis. Feel free to reach out!
             </p>
           </div>
           <div className="surface-card relative overflow-hidden p-6">
