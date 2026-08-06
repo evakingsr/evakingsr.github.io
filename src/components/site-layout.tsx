@@ -39,8 +39,22 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
       </header>
       <main>{children}</main>
       <footer className="mt-24 border-t border-border/60">
-        <div className="mx-auto flex max-w-5xl flex-col gap-2 px-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-10 text-sm text-muted-foreground sm:flex-row sm:justify-between">
           <p>© {new Date().getFullYear()} Eva King-Senior</p>
+          <div className="flex items-center gap-3">
+            {socials.map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("mailto:") ? undefined : "_blank"}
+                rel="noreferrer"
+                aria-label={label}
+                className="inline-flex size-10 items-center justify-center rounded-full border border-border/70 bg-muted/50 text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/10 hover:text-primary"
+              >
+                <Icon className="size-4.5" aria-hidden />
+              </a>
+            ))}
+          </div>
           <p>Junior at Bowdoin College · Seeking Summer 2027 internships</p>
         </div>
       </footer>
