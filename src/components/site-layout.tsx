@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Home" },
