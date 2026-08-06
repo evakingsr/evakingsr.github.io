@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Briefcase, Code, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { GetInTouch } from "@/components/get-in-touch";
 import { PageHeader, SiteLayout } from "@/components/site-layout";
 
 export const Route = createFileRoute("/contact")({
@@ -106,6 +107,7 @@ function ContactPage() {
           </ul>
         </div>
       </section>
+      <GetInTouch />
     </SiteLayout>
   );
 }
