@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroGradient from "@/assets/hero-gradient.jpg";
 import headshot from "@/assets/headshot.jpg.asset.json";
-import { Atom, Dumbbell, MapPin, Sparkles } from "lucide-react";
+import { Atom, Dumbbell, Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 import { SiteLayout } from "@/components/site-layout";
 
