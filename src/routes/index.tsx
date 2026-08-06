@@ -1,10 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroGradient from "@/assets/hero-gradient.jpg";
 import headshot from "@/assets/headshot.jpg.asset.json";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Atom, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 
-
-import { GetInTouch } from "@/components/get-in-touch";
 import { SiteLayout } from "@/components/site-layout";
 
 
@@ -36,6 +34,12 @@ const campusRoles = [
   { title: "Treasurer", org: "Bowdoin Women in Computer Science" },
   { title: "Co-Founder & Captain", org: "Bowdoin Women's Club Flag Football" },
   { title: "Operations Assistant", org: "Bowdoin Office of Admissions" },
+];
+
+const funFacts = [
+  { icon: MapPin, text: "Originally from Queens and Brooklyn, NY" },
+  { icon: Atom, text: "Focused on physics courses during my dual enrollment in high school" },
+  { icon: Sparkles, text: "My Latin American and Caribbean Studies minor started with family, food, and history" },
 ];
 
 
@@ -156,6 +160,20 @@ function Index() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-5xl px-6 pt-14">
+        <div className="surface-card p-7 sm:p-9">
+          <h2 className="text-lg font-semibold tracking-tight">A few things about me</h2>
+          <ul className="mt-5 grid gap-4 sm:grid-cols-3">
+            {funFacts.map(({ icon: Icon, text }) => (
+              <li key={text} className="flex items-start gap-3 text-sm text-muted-foreground">
+                <Icon className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden />
+                <span>{text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-5xl px-6 pb-4 pt-12">
         <div className="gradient-soft rounded-[var(--radius-3xl)] px-8 py-14 text-center shadow-[var(--shadow-soft)]">
           <h2 className="text-3xl font-bold">Recruiting for summer internships?</h2>
@@ -178,8 +196,6 @@ function Index() {
           </div>
         </div>
       </section>
-
-      <GetInTouch />
     </SiteLayout>
   );
 }
