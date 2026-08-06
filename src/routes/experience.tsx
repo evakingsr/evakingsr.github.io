@@ -163,8 +163,12 @@ function ExperiencePage() {
           {roles.map((role) => (
             <article
               key={`${role.org}-${role.title}`}
-              className="surface-card p-6 transition-all hover:-translate-y-1 hover:border-primary/40 sm:p-8"
+              className="surface-card group relative overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 sm:p-8"
             >
+              <span
+                aria-hidden
+                className="absolute inset-x-0 top-0 z-10 h-1 scale-x-0 bg-gradient-to-r from-primary via-accent to-berry transition-transform duration-300 group-hover:scale-x-100"
+              />
               <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_1.6fr] md:gap-10">
                 <div className="min-w-0">
                   <h3 className="text-xl font-bold leading-snug text-primary">{role.title}</h3>
@@ -185,7 +189,7 @@ function ExperiencePage() {
                     {role.points.map((point) => (
                       <li key={point} className="flex gap-3">
                         <span
-                          className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-berry"
+                          className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
                           aria-hidden="true"
                         />
                         <span>{point}</span>
@@ -204,7 +208,14 @@ function ExperiencePage() {
         <h2 className="text-2xl font-bold">Education</h2>
         <div className="mt-6 space-y-5">
           {education.map((school) => (
-            <article key={school.school} className="surface-card p-6">
+            <article
+              key={school.school}
+              className="surface-card group relative overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+            >
+              <span
+                aria-hidden
+                className="absolute inset-x-0 top-0 z-10 h-1 scale-x-0 bg-gradient-to-r from-primary via-accent to-berry transition-transform duration-300 group-hover:scale-x-100"
+              />
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-lg font-semibold">{school.school}</h3>
                 <p className="text-sm text-muted-foreground">{school.period}</p>
@@ -231,7 +242,14 @@ function ExperiencePage() {
         <h2 className="text-2xl font-bold">Skills</h2>
         <div className="mt-6 grid gap-5 sm:grid-cols-3">
           {skills.map((skill) => (
-            <div key={skill.group} className="surface-card p-6">
+            <div
+              key={skill.group}
+              className="surface-card group relative overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+            >
+              <span
+                aria-hidden
+                className="absolute inset-x-0 top-0 z-10 h-1 scale-x-0 bg-gradient-to-r from-primary via-accent to-berry transition-transform duration-300 group-hover:scale-x-100"
+              />
               <h3 className="text-sm font-semibold">{skill.group}</h3>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {skill.items.map((item) => (
@@ -254,8 +272,12 @@ function ExperiencePage() {
           {certifications.map((cert) => (
             <div
               key={cert.title}
-              className="surface-card relative overflow-hidden p-6 transition-all hover:-translate-y-1 hover:border-primary/40"
+              className="surface-card group relative overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
             >
+              <span
+                aria-hidden
+                className="absolute inset-x-0 top-0 z-10 h-1 scale-x-0 bg-gradient-to-r from-primary via-accent to-berry transition-transform duration-300 group-hover:scale-x-100"
+              />
               <span className="gradient-soft absolute inset-y-0 left-0 w-1.5" aria-hidden="true" />
               <div className="flex items-start gap-4">
                 <span className="grid size-11 shrink-0 place-items-center rounded-full bg-accent/60 text-accent-foreground">
