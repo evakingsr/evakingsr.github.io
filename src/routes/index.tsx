@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroGradient from "@/assets/hero-gradient.jpg";
 import headshot from "@/assets/headshot.jpg.asset.json";
-import { Atom, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
+import { Atom, Dumbbell, MapPin, Sparkles } from "lucide-react";
 
 import { SiteLayout } from "@/components/site-layout";
 
@@ -39,7 +39,7 @@ const campusRoles = [
 const funFacts = [
   { icon: MapPin, text: "Originally from Queens and Brooklyn, NY" },
   { icon: Atom, text: "Focused on physics courses during my dual enrollment in high school" },
-  { icon: Sparkles, text: "My Latin American and Caribbean Studies minor started with family, food, and history" },
+  { icon: Dumbbell, text: "I recharge with long walks, yoga, or a gym session" },
 ];
 
 
