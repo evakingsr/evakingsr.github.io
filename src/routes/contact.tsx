@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Github, GraduationCap, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
+import { Briefcase, Code, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/site-layout";
 
 export const Route = createFileRoute("/contact")({
@@ -47,13 +47,10 @@ const links = [
   },
 ];
 
-const funFacts = [
-  { icon: MapPin, text: "Originally from Queens and Brooklyn, NY" },
-  {
-    icon: GraduationCap,
-    text: "My Latin American and Caribbean Studies minor started with family, food, and history",
-  },
-  { icon: Sparkles, text: "Ask me about binary trees, flag football, or the best Jamaican patties" },
+const reachOutAbout = [
+  { icon: Briefcase, text: "Summer 2027 internships and opportunities" },
+  { icon: Code, text: "Software engineering, fintech, or data projects" },
+  { icon: MessageCircle, text: "A recommendation for the best Jamaican patty in NYC" },
 ];
 
 function ContactPage() {
@@ -98,9 +95,9 @@ function ContactPage() {
         </div>
 
         <div className="surface-card mt-8 p-7 sm:p-9">
-          <h2 className="text-lg font-semibold tracking-tight">A few things about me</h2>
+          <h2 className="text-lg font-semibold tracking-tight">What to reach out about</h2>
           <ul className="mt-5 grid gap-4 sm:grid-cols-3">
-            {funFacts.map(({ icon: Icon, text }) => (
+            {reachOutAbout.map(({ icon: Icon, text }) => (
               <li key={text} className="flex items-start gap-3 text-sm text-muted-foreground">
                 <Icon className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden />
                 <span>{text}</span>
