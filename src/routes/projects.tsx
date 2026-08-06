@@ -121,7 +121,14 @@ function ProjectsPage() {
       <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="grid gap-6">
           {projects.map((project) => (
-            <article key={project.title} className="surface-card flex flex-col p-7 sm:p-9">
+            <article
+              key={project.title}
+              className="surface-card group relative flex flex-col overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 sm:p-9"
+            >
+              <span
+                aria-hidden
+                className="absolute inset-x-0 top-0 z-10 h-1 scale-x-0 bg-gradient-to-r from-primary via-accent to-berry transition-transform duration-300 group-hover:scale-x-100"
+              />
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 <h2 className="text-2xl font-semibold tracking-tight">{project.title}</h2>
                 {project.tagline ? (
@@ -143,7 +150,7 @@ function ProjectsPage() {
                 {project.stack.map((tech) => (
                   <li
                     key={tech}
-                    className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground"
+                    className="rounded-full bg-secondary px-3 py-1 text-xs text-secondary-foreground"
                   >
                     {tech}
                   </li>
