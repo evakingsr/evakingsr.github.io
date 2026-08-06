@@ -1,6 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { Github, Linkedin, Mail } from "lucide-react";
 
+const socials = [
+  { label: "Email", href: "mailto:evakingsr@gmail.com", icon: Mail },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/evakingsenior", icon: Linkedin },
+  { label: "GitHub", href: "https://github.com/evakingsr", icon: Github },
+] as const;
+
 const nav = [
   { to: "/", label: "Home" },
   { to: "/experience", label: "Experience" },
