@@ -9,13 +9,13 @@ import { SiteLayout } from "@/components/site-layout";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Eva King-Senior | Computer @ Bowdoin" },
+      { title: "Eva King-Senior" },
       {
         name: "description",
         content:
           "Portfolio of Eva King-Senior: software and fintech projects, experience, skills, and contact details for internship recruiters.",
       },
-      { property: "og:title", content: "Eva King-Senior | Computer @ Bowdoin" },
+      { property: "og:title", content: "Eva King-Senior" },
       {
         property: "og:description",
         content: "Projects, experience, and skills from an aspiring tech and fintech intern.",
@@ -127,16 +127,12 @@ function Index() {
           <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
               My name is Eva, and I&apos;m a junior at Bowdoin College majoring in Computer Science with a
-              minor in Latin American and Caribbean Studies. Originally from Queens and Brooklyn, NY, I
-              grew up between two neighborhoods that taught me to adapt quickly and notice details. On
-              campus, I&apos;m Co-President of Smart Woman Securities, treasurer of Bowdoin Women in
-              Computer Science, co-founder and captain of Bowdoin Women&apos;s Club Flag Football team, and
-              Operations Assistant in the Office of Admissions.
-            </p>
-            <p>
-              I&apos;m drawn to using code to solve real problems and build things people can actually
-              use, and I value the collaboration that comes with team projects and campus leadership
-              as much as the technical work itself. I build primarily in Java, Python, and
+              minor in Latin American and Caribbean Studies. On campus, I&apos;m Co-President of Smart
+              Woman Securities, treasurer of Bowdoin Women in Computer Science, co-founder and captain
+              of Bowdoin Women&apos;s Club Flag Football team, and Operations Assistant in the Office of
+              Admissions. I&apos;m drawn to using code to solve real problems and build things people can
+              actually use, and I value the collaboration that comes with team projects and campus
+              leadership as much as the technical work itself. I build primarily in Java, Python, and
               JavaScript, and I&apos;m currently looking for summer internships in fintech and data
               analysis. Feel free to{" "}
               <Link to="/contact" className="font-medium text-foreground underline decoration-primary underline-offset-4 transition-colors hover:text-primary">
