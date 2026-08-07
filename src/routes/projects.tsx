@@ -209,12 +209,11 @@ function ProjectsPage() {
                 {project.doc ? (
                   <a
                     href={project.doc}
-                    target="_blank"
-                    rel="noreferrer"
+                    download="Eva-King-Senior-Airbnb-Stock-Pitch.pdf"
                     className="inline-flex items-center gap-2 rounded-full bg-berry px-5 py-2 text-sm font-medium text-berry-foreground transition hover:opacity-90"
                   >
                     <FileText className="size-4" aria-hidden />
-                    View the pitch deck
+                    Download the pitch deck
                   </a>
                 ) : null}
               </div>
