@@ -158,7 +158,7 @@ function ExperiencePage() {
       />
 
       <section className="mx-auto max-w-5xl px-6 py-14">
-        <h2 className="text-2xl font-bold">Experience</h2>
+        <h2 className="text-2xl font-bold">Work experience</h2>
         <div className="mt-8 space-y-6">
           {roles.map((role) => (
             <article
