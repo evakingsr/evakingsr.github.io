@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { GetInTouch } from "@/components/get-in-touch";
 import { PageHeader, SiteLayout } from "@/components/site-layout";
 
