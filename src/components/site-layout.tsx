@@ -28,7 +28,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
               <Link
                 key={item.label}
                 to={item.to}
-                hash={item.hash}
+                {...("hash" in item ? { hash: item.hash } : {})}
                 activeOptions={{ exact: item.to === "/", includeHash: true }}
                 className="rounded-full px-3 py-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                 activeProps={{ className: "bg-secondary text-secondary-foreground" }}
