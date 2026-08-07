@@ -26,9 +26,10 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
           <nav className="flex flex-wrap items-center gap-1 text-sm">
             {nav.map((item) => (
               <Link
-                key={item.to}
+                key={item.label}
                 to={item.to}
-                activeOptions={{ exact: item.to === "/" }}
+                hash={item.hash}
+                activeOptions={{ exact: item.to === "/", includeHash: true }}
                 className="rounded-full px-3 py-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                 activeProps={{ className: "bg-secondary text-secondary-foreground" }}
               >
@@ -56,7 +57,11 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
               </a>
             ))}
           </div>
-          <p>Junior at Bowdoin College · Seeking Summer 2027 internships</p>
+          <p className="text-center sm:text-right">
+            Junior at Bowdoin College
+            <br />
+            Seeking Summer 2027 internships
+          </p>
         </div>
       </footer>
     </div>
