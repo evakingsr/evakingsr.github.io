@@ -195,15 +195,28 @@ function ProjectsPage() {
                     Live demo
                   </a>
                 ) : null}
-                <a
-                  href={project.repo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2 text-sm font-medium transition hover:bg-muted"
-                >
-                  <Github className="size-4" aria-hidden />
-                  View code
-                </a>
+                {project.repo ? (
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2 text-sm font-medium transition hover:bg-muted"
+                  >
+                    <Github className="size-4" aria-hidden />
+                    View code
+                  </a>
+                ) : null}
+                {project.doc ? (
+                  <a
+                    href={project.doc}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-berry px-5 py-2 text-sm font-medium text-berry-foreground transition hover:opacity-90"
+                  >
+                    <FileText className="size-4" aria-hidden />
+                    View the pitch deck
+                  </a>
+                ) : null}
               </div>
             </article>
           ))}
