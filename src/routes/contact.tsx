@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { GetInTouch } from "@/components/get-in-touch";
 import { PageHeader, SiteLayout } from "@/components/site-layout";
 
@@ -90,6 +91,15 @@ function ContactPage() {
           ))}
         </div>
 
+        <a
+          href={resumeAsset.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mx-auto mt-10 flex w-fit items-center gap-3 rounded-full bg-[var(--berry)] px-8 py-4 text-base font-semibold text-[var(--berry-foreground)] shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <FileText className="size-5" aria-hidden />
+          View my resume
+        </a>
       </section>
       <GetInTouch />
     </SiteLayout>

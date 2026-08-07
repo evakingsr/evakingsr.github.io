@@ -1,37 +1,13 @@
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
-import { FileText, Linkedin, Mail, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { toast } from "sonner";
 
-import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { sendContactMessage } from "@/lib/contact.functions";
 
 const inputClasses =
   "mt-2 w-full rounded-xl border border-border bg-card px-4 py-2.5 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary";
 
-const details = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "evakingsr@gmail.com",
-    href: "mailto:evakingsr@gmail.com",
-    external: false,
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    value: "linkedin.com/in/evakingsenior",
-    href: "https://www.linkedin.com/in/evakingsenior/",
-    external: true,
-  },
-  {
-    icon: FileText,
-    label: "Resume",
-    value: "Open my resume (PDF)",
-    href: resumeAsset.url,
-    external: true,
-  },
-];
 
 export function GetInTouch() {
   const submit = useServerFn(sendContactMessage);
@@ -79,40 +55,8 @@ export function GetInTouch() {
         </span>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
-        <div className="surface-card p-8">
-          <h3 className="text-xl font-semibold">Reach me directly</h3>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Questions, opportunities, or just want to say hello? I will get back to you as soon as I
-            can.
-          </p>
-
-          <ul className="mt-7 space-y-5">
-            {details.map(({ icon: Icon, label, value, href, external }) => (
-              <li key={label}>
-                <a
-                  href={href}
-                  target={external ? "_blank" : undefined}
-                  rel={external ? "noopener noreferrer" : undefined}
-                  className="group flex items-center gap-4 rounded-xl transition-colors"
-                >
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary text-secondary-foreground transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
-                    <Icon size={18} aria-hidden="true" />
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold">{label}</p>
-                    <p className="text-sm text-muted-foreground transition-colors group-hover:text-primary">
-                      {value}
-                    </p>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
-
-        </div>
-
-        <form onSubmit={handleSubmit} className="surface-card p-8">
+      <div className="mt-10">
+        <form onSubmit={handleSubmit} className="surface-card mx-auto max-w-2xl p-8">
           <h3 className="text-xl font-semibold">Send a message</h3>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
