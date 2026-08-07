@@ -50,6 +50,7 @@ const projects = [
     ],
     repo: "https://github.com/thy-dye/Cura-Motus",
     demo: "https://cura-motus.vercel.app",
+    doc: null as string | null,
   },
   {
     title: "PennyPlan",
@@ -75,6 +76,7 @@ const projects = [
     ],
     repo: "https://github.com/evakingsr/PennyPlan",
     demo: null as string | null,
+    doc: null as string | null,
   },
   {
     title: "TagAlong",
@@ -90,6 +92,7 @@ const projects = [
     stack: ["Python", "SQLite", "Google Gemini API", "Geoapify API", "WeatherAPI"],
     repo: "https://github.com/aloulou-dev/tagalong",
     demo: null as string | null,
+    doc: null as string | null,
   },
   {
     title: "Sudoku Solver",
@@ -105,6 +108,7 @@ const projects = [
     stack: ["Java", "Data structures", "Backtracking algorithms", "IntelliJ IDEA"],
     repo: "https://github.com/evakingsr/Sudoku-Solver",
     demo: null as string | null,
+    doc: null as string | null,
   },
 ];
 
