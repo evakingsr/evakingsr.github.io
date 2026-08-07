@@ -99,7 +99,7 @@ function ContactPage() {
           className="mx-auto mt-10 flex w-fit items-center gap-3 rounded-full bg-[var(--berry)] px-8 py-4 text-base font-semibold text-[var(--berry-foreground)] shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
           <FileText className="size-5" aria-hidden />
-          View my resume
+          Download my resume
         </a>
       </section>
       <GetInTouch />
