@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroGradient from "@/assets/hero-gradient.jpg";
-import headshot from "@/assets/headshot.jpg.asset.json";
+import headshot from "@/assets/headshot.jpg";
 import { Atom, Dumbbell, Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 import { SiteLayout } from "@/components/site-layout";
@@ -58,7 +58,7 @@ function Index() {
         <div className="relative mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
           <div className="mx-auto w-fit rounded-full bg-card/70 p-1.5 shadow-[var(--shadow-soft)] ring-1 ring-border backdrop-blur">
             <img
-              src={headshot.url}
+              src={headshot}
               alt="Portrait of Eva King-Senior"
               width={400}
               height={400}
