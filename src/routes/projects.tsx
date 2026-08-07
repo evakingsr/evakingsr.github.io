@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, FileText, Github } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/site-layout";
+import stockPitchAsset from "@/assets/stock-pitch.pdf.asset.json";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -49,6 +50,7 @@ const projects = [
     ],
     repo: "https://github.com/thy-dye/Cura-Motus",
     demo: "https://cura-motus.vercel.app",
+    doc: null as string | null,
   },
   {
     title: "PennyPlan",
@@ -74,6 +76,7 @@ const projects = [
     ],
     repo: "https://github.com/evakingsr/PennyPlan",
     demo: null as string | null,
+    doc: null as string | null,
   },
   {
     title: "TagAlong",
@@ -89,6 +92,7 @@ const projects = [
     stack: ["Python", "SQLite", "Google Gemini API", "Geoapify API", "WeatherAPI"],
     repo: "https://github.com/aloulou-dev/tagalong",
     demo: null as string | null,
+    doc: null as string | null,
   },
   {
     title: "Sudoku Solver",
@@ -104,6 +108,29 @@ const projects = [
     stack: ["Java", "Data structures", "Backtracking algorithms", "IntelliJ IDEA"],
     repo: "https://github.com/evakingsr/Sudoku-Solver",
     demo: null as string | null,
+    doc: null as string | null,
+  },
+  {
+    title: "Airbnb (ABNB) Stock Pitch",
+    tagline: "Smart Woman Securities | Spring 2025",
+    summary:
+      "A team equity research pitch on Airbnb prepared for Smart Woman Securities at Bowdoin. We valued the company with a discounted cash flow model, benchmarked it against Booking Holdings and Expedia, and issued a buy recommendation with an implied share price of $153.29 against a $114.91 market price, roughly 33% upside.",
+    highlights: [
+      "DCF valuation using an 8% WACC and a 2% perpetuity growth rate on free cash flow",
+      "Comparable company analysis across Airbnb, Booking.com, and Expedia on EV and P/E multiples",
+      "Porter's Five Forces breakdown of the short-term rental and hospitality market",
+      "Risk assessment covering travel demand, stock-based dilution, and new business spend",
+    ],
+    stack: [
+      "Equity research",
+      "DCF modeling",
+      "Comparable company analysis",
+      "Porter's Five Forces",
+      "Excel",
+    ],
+    repo: null as string | null,
+    demo: null as string | null,
+    doc: stockPitchAsset.url as string | null,
   },
 ];
 
@@ -168,15 +195,28 @@ function ProjectsPage() {
                     Live demo
                   </a>
                 ) : null}
-                <a
-                  href={project.repo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2 text-sm font-medium transition hover:bg-muted"
-                >
-                  <Github className="size-4" aria-hidden />
-                  View code
-                </a>
+                {project.repo ? (
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2 text-sm font-medium transition hover:bg-muted"
+                  >
+                    <Github className="size-4" aria-hidden />
+                    View code
+                  </a>
+                ) : null}
+                {project.doc ? (
+                  <a
+                    href={project.doc}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-berry px-5 py-2 text-sm font-medium text-berry-foreground transition hover:opacity-90"
+                  >
+                    <FileText className="size-4" aria-hidden />
+                    View the pitch deck
+                  </a>
+                ) : null}
               </div>
             </article>
           ))}
