@@ -1,17 +1,36 @@
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { FileText, Linkedin, Mail, Send } from "lucide-react";
 import { toast } from "sonner";
 
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { sendContactMessage } from "@/lib/contact.functions";
 
 const inputClasses =
   "mt-2 w-full rounded-xl border border-border bg-card px-4 py-2.5 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary";
 
 const details = [
-  { icon: Mail, label: "Email", value: "evakingsr@gmail.com", href: "mailto:evakingsr@gmail.com" },
-  { icon: Phone, label: "Phone", value: "646-460-3161", href: "tel:+16464603161" },
-  { icon: MapPin, label: "Location", value: "Brunswick, Maine", href: null },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "evakingsr@gmail.com",
+    href: "mailto:evakingsr@gmail.com",
+    external: false,
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "linkedin.com/in/evakingsenior",
+    href: "https://www.linkedin.com/in/evakingsenior/",
+    external: true,
+  },
+  {
+    icon: FileText,
+    label: "Resume",
+    value: "Open my resume (PDF)",
+    href: resumeAsset.url,
+    external: true,
+  },
 ];
 
 export function GetInTouch() {
@@ -69,27 +88,28 @@ export function GetInTouch() {
           </p>
 
           <ul className="mt-7 space-y-5">
-            {details.map(({ icon: Icon, label, value, href }) => (
-              <li key={label} className="flex items-center gap-4">
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary text-secondary-foreground">
-                  <Icon size={18} aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold">{label}</p>
-                  {href ? (
-                    <a
-                      href={href}
-                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                    >
+            {details.map(({ icon: Icon, label, value, href, external }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                  className="group flex items-center gap-4 rounded-xl transition-colors"
+                >
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary text-secondary-foreground transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
+                    <Icon size={18} aria-hidden="true" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold">{label}</p>
+                    <p className="text-sm text-muted-foreground transition-colors group-hover:text-primary">
                       {value}
-                    </a>
-                  ) : (
-                    <p className="text-sm text-muted-foreground">{value}</p>
-                  )}
-                </div>
+                    </p>
+                  </div>
+                </a>
               </li>
             ))}
           </ul>
+
         </div>
 
         <form onSubmit={handleSubmit} className="surface-card p-8">

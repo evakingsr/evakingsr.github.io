@@ -204,7 +204,7 @@ function ExperiencePage() {
 
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 pb-14">
+      <section id="education" className="mx-auto max-w-5xl scroll-mt-24 px-6 pb-14">
         <h2 className="text-2xl font-bold">Education</h2>
         <div className="mt-6 space-y-5">
           {education.map((school) => (
