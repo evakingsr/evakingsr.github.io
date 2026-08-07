@@ -8,12 +8,12 @@ const socials = [
 ] as const;
 
 const nav = [
-  { to: "/", label: "Home", hash: undefined },
-  { to: "/experience", label: "Experience", hash: undefined },
+  { to: "/", label: "Home" },
+  { to: "/experience", label: "Experience" },
   { to: "/experience", label: "Education", hash: "education" },
-  { to: "/projects", label: "Projects", hash: undefined },
-  { to: "/contact", label: "Contact", hash: undefined },
-] as const;
+  { to: "/projects", label: "Projects" },
+  { to: "/contact", label: "Contact" },
+] as const satisfies ReadonlyArray<{ to: string; label: string; hash?: string }>;
 
 export function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
