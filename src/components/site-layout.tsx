@@ -47,7 +47,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
                 key={label}
                 href={href}
                 target={href.startsWith("mailto:") ? undefined : "_blank"}
-                rel="noreferrer"
+                rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
                 aria-label={label}
                 className="inline-flex size-10 items-center justify-center rounded-full border border-border/70 bg-muted/50 text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/10 hover:text-primary"
               >

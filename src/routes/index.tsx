@@ -92,7 +92,7 @@ function Index() {
             <a
               href="https://github.com/evakingsr"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="GitHub profile"
               className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:bg-muted hover:text-primary"
             >
@@ -101,7 +101,7 @@ function Index() {
             <a
               href="https://www.linkedin.com/in/evakingsenior"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="LinkedIn profile"
               className="rounded-full border border-border bg-card p-3 text-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:bg-muted hover:text-primary"
             >
