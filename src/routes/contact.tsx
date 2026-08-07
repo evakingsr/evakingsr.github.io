@@ -71,7 +71,7 @@ function ContactPage() {
               key={label}
               href={href}
               target={href.startsWith("mailto:") ? undefined : "_blank"}
-              rel="noreferrer"
+              rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
               className="surface-card group relative block overflow-hidden p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
             >
               <span
