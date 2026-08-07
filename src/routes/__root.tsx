@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Eva King-Senior | Computer Science @ Bowdoin" },
+      { title: "Eva King-Senior | Computer @ Bowdoin" },
       {
         name: "description",
         content: "Projects, experience, and skills of Eva King-Senior.",
