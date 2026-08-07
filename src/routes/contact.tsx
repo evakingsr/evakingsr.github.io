@@ -35,7 +35,7 @@ const links = [
   {
     label: "LinkedIn",
     value: "linkedin.com/in/evakingsenior",
-    href: "https://www.linkedin.com/in/evakingsenior",
+    href: "https://www.linkedin.com/in/evakingsenior/",
     icon: Linkedin,
     note: "Say hi, connect, or refer",
   },
