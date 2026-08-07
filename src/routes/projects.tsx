@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, FileText, Github } from "lucide-react";
 import { PageHeader, SiteLayout } from "@/components/site-layout";
+import stockPitchAsset from "@/assets/stock-pitch.pdf.asset.json";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
