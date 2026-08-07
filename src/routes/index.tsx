@@ -9,13 +9,13 @@ import { SiteLayout } from "@/components/site-layout";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Eva King-Senior | Tech & Fintech Portfolio" },
+      { title: "Eva King-Senior | Computer Science @ Bowdoin" },
       {
         name: "description",
         content:
           "Portfolio of Eva King-Senior: software and fintech projects, experience, skills, and contact details for internship recruiters.",
       },
-      { property: "og:title", content: "Eva King-Senior | Tech & Fintech Portfolio" },
+      { property: "og:title", content: "Eva King-Senior | Computer Science @ Bowdoin" },
       {
         property: "og:description",
         content: "Projects, experience, and skills from an aspiring tech and fintech intern.",
