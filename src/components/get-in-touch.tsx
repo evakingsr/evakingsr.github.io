@@ -1,17 +1,36 @@
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { FileText, Linkedin, Mail, Send } from "lucide-react";
 import { toast } from "sonner";
 
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { sendContactMessage } from "@/lib/contact.functions";
 
 const inputClasses =
   "mt-2 w-full rounded-xl border border-border bg-card px-4 py-2.5 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary";
 
 const details = [
-  { icon: Mail, label: "Email", value: "evakingsr@gmail.com", href: "mailto:evakingsr@gmail.com" },
-  { icon: Phone, label: "Phone", value: "646-460-3161", href: "tel:+16464603161" },
-  { icon: MapPin, label: "Location", value: "Brunswick, Maine", href: null },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "evakingsr@gmail.com",
+    href: "mailto:evakingsr@gmail.com",
+    external: false,
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "linkedin.com/in/evakingsenior",
+    href: "https://www.linkedin.com/in/evakingsenior/",
+    external: true,
+  },
+  {
+    icon: FileText,
+    label: "Resume",
+    value: "Open my resume (PDF)",
+    href: resumeAsset.url,
+    external: true,
+  },
 ];
 
 export function GetInTouch() {
