@@ -110,6 +110,28 @@ const projects = [
     demo: null as string | null,
     doc: null as string | null,
   },
+  {
+    title: "Airbnb (ABNB) Stock Pitch",
+    tagline: "Smart Woman Securities | Spring 2025",
+    summary:
+      "A team equity research pitch on Airbnb prepared for Smart Woman Securities at Bowdoin. We valued the company with a discounted cash flow model, benchmarked it against Booking Holdings and Expedia, and issued a buy recommendation with an implied share price of $153.29 against a $114.91 market price, roughly 33% upside.",
+    highlights: [
+      "DCF valuation using an 8% WACC and a 2% perpetuity growth rate on free cash flow",
+      "Comparable company analysis across Airbnb, Booking.com, and Expedia on EV and P/E multiples",
+      "Porter's Five Forces breakdown of the short-term rental and hospitality market",
+      "Risk assessment covering travel demand, stock-based dilution, and new business spend",
+    ],
+    stack: [
+      "Equity research",
+      "DCF modeling",
+      "Comparable company analysis",
+      "Porter's Five Forces",
+      "Excel",
+    ],
+    repo: null as string | null,
+    demo: null as string | null,
+    doc: stockPitchAsset.url as string | null,
+  },
 ];
 
 
