@@ -88,27 +88,28 @@ export function GetInTouch() {
           </p>
 
           <ul className="mt-7 space-y-5">
-            {details.map(({ icon: Icon, label, value, href }) => (
-              <li key={label} className="flex items-center gap-4">
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary text-secondary-foreground">
-                  <Icon size={18} aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold">{label}</p>
-                  {href ? (
-                    <a
-                      href={href}
-                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                    >
+            {details.map(({ icon: Icon, label, value, href, external }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                  className="group flex items-center gap-4 rounded-xl transition-colors"
+                >
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-secondary text-secondary-foreground transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
+                    <Icon size={18} aria-hidden="true" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold">{label}</p>
+                    <p className="text-sm text-muted-foreground transition-colors group-hover:text-primary">
                       {value}
-                    </a>
-                  ) : (
-                    <p className="text-sm text-muted-foreground">{value}</p>
-                  )}
-                </div>
+                    </p>
+                  </div>
+                </a>
               </li>
             ))}
           </ul>
+
         </div>
 
         <form onSubmit={handleSubmit} className="surface-card p-8">
